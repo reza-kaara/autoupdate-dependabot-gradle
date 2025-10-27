@@ -1,0 +1,62 @@
+version: 2
+updates:
+# -------------------------------------------------------------------
+# Java / Gradle
+# -------------------------------------------------------------------
+  - package-ecosystem: "gradle"
+    directory: "/java"
+    schedule:
+      interval: "daily"
+    commit-message:
+      prefix: "deps(java)"
+    open-pull-requests-limit: 10
+    labels:
+      - "deps"
+      - "lang:java"
+# Grouping rules
+    groups:
+# One PR for safe version bumps
+      regular-updates:
+        applies-to: version-updates
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
+          - "patch"
+# Isolate major upgrades
+      major-updates:
+        applies-to: version-updates
+        patterns:
+          - "*"
+        update-types:
+          - "major"
+# -------------------------------------------------------------------
+# Python / pip
+# -------------------------------------------------------------------
+  - package-ecosystem: "pip"
+    directory: "/python"
+    schedule:
+      interval: "daily"
+    commit-message:
+      prefix: "deps(python)"
+    open-pull-requests-limit: 10
+    labels:
+      - "deps"
+      - "lang:python"
+# Grouping rules
+    groups:
+# One PR for safe version bumps
+      regular-updates:
+        applies-to: version-updates
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
+          - "patch"
+# Isolate major upgrades
+      major-updates:
+        applies-to: version-updates
+        patterns:
+          - "*"
+        update-types:
+          - "major"
