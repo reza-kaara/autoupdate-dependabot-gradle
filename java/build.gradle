@@ -26,11 +26,11 @@ dependencies {
     // --- Database and logging dependencies ---
     implementation 'org.postgresql:postgresql:42.7.9'
     implementation 'org.apache.logging.log4j:log4j-core:2.25.2' // intentionally vulnerable (CVE-2021-44228)
-    implementation 'org.flywaydb:flyway-core:11.14.1'
+    implementation 'org.flywaydb:flyway-core:11.15.0'
 
     // --- Testing / misc ---
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testImplementation 'org.mockito:mockito-core:5.19.0'
+    testImplementation 'org.mockito:mockito-core:5.20.0'
     testImplementation 'org.assertj:assertj-core:3.27.6'
     testImplementation 'org.junit.jupiter:junit-jupiter:5.14.0'
 }
