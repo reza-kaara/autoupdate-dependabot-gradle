@@ -26,7 +26,7 @@ updates:
         update-types:
           - "minor"
           - "patch"
-      minor-and-patch:
+      vulnerabilities:
         applies-to: security-updates
         patterns:
           - "*"
@@ -34,6 +34,10 @@ updates:
           - "patch"
           - "minor"
           - "major"
+        labels:
+          - "deps"
+          - "lang:java"
+          - "security"
 # -------------------------------------------------------------------
 # Python / pip
 # -------------------------------------------------------------------
