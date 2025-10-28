@@ -19,17 +19,13 @@ updates:
       regular-updates:
         applies-to: version-updates
         patterns:
-          - "*"
+          - "org.mockito:mockito-core"
+          - "org.springframework.boot"
+          - "org.flywaydb:flyway-core"
+          - "org.junit.jupiter:junit-jupiter"
         update-types:
           - "minor"
           - "patch"
-# Isolate major upgrades
-      major-updates:
-        applies-to: version-updates
-        patterns:
-          - "*"
-        update-types:
-          - "major"
 # -------------------------------------------------------------------
 # Python / pip
 # -------------------------------------------------------------------
