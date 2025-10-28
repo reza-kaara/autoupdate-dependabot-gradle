@@ -61,3 +61,8 @@ updates:
           - "urllib3"
         update-types:
           - "major"
+# Other
+      other-updates:
+        applies-to: version-updates
+        patterns:
+          - "*"
