@@ -50,9 +50,6 @@ updates:
         applies-to: version-updates
         patterns:
           - "werkzeug"
-        update-types:
-          - "minor"
-          - "patch"
 # Isolate major upgrades
       major-updates:
         applies-to: version-updates
@@ -61,8 +58,3 @@ updates:
           - "urllib3"
         update-types:
           - "major"
-# Other
-      other-updates:
-        applies-to: version-updates
-        patterns:
-          - "*"
